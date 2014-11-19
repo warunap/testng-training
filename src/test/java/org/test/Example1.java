@@ -17,6 +17,7 @@
 */
 package org.test;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class Example1 {
@@ -54,7 +55,7 @@ public class Example1 {
     @Test(expectedExceptions = ArithmeticException.class)
     public void testMethod1(){
         System.out.println("method1");
-        int i = 1/0;
+        Assert.assertTrue(false);
     }
 
     @Test()
