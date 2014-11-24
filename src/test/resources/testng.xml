@@ -4,6 +4,8 @@
     <test name="example" >
         <classes>
             <class name="org.test.Example1" />
+            <class name="org.test.Example2"/>
         </classes>
+
     </test>
 </suite>

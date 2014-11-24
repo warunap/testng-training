@@ -17,10 +17,16 @@
 */
 package org.test;
 
-import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class Example1 {
+public class Example2 {
+
+    private String addressLine;
+
+    @Factory(dataProvider = "testDataProvider")
+    public Example2(String addressLine) {
+        this.addressLine = addressLine;
+    }
 
     @BeforeSuite()
     public void beforeSuite(){
@@ -52,39 +58,14 @@ public class Example1 {
         System.out.println("after each method");
     }
 
-    @Test
-    public void testMethod1(){
-        System.out.println("method1");
-        Assert.assertTrue(true);
-    }
-
     @Test()
-    public void testMethod2(){
-        while(true){
-            System.out.println("method2");
-            break;
-        }
+    public void testMethodProvider(){
+        System.out.println("method runs = " + addressLine);
     }
 
-    @Test(dependsOnMethods = "testMethod1")
-    public void dependsTest(){
-        System.out.println("Depends ");
-    }
-
-    @Test(dataProvider = "testqqqq")
-    public void testDataProvider(int i, int a){
-        System.out.println("Prime Number" + i + a );
-
-    }
-
-    @DataProvider(name = "test1")
-    public static Object[][] primeNumbers() {
-        return new Object[][] { {1, 3}, {1, 4}};
-    }
-
-    @DataProvider(name = "testqqqq")
-    public static Object[][] testProv(){
-        return new Object[][] {{1, 4}, {5, 6}};
+    @DataProvider
+    public static String[][] testDataProvider(){
+        return new String[][] {new String[]{"state"}, new String[]{"city"}};
     }
 
 }
