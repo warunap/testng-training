@@ -17,6 +17,7 @@
 */
 package org.test;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class Example2 {
@@ -61,6 +62,9 @@ public class Example2 {
     @Test()
     public void testMethodProvider(){
         System.out.println("method runs = " + addressLine);
+        if (addressLine.equalsIgnoreCase("state")) {
+            Assert.assertTrue(false);
+        }
     }
 
     @DataProvider
