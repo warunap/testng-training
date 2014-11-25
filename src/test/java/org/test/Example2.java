@@ -22,53 +22,23 @@ import org.testng.annotations.*;
 
 public class Example2 {
 
-    private String addressLine;
+    /*private String addressLine;*/
 
-    @Factory(dataProvider = "testDataProvider")
+    /*@Factory(dataProvider = "testDataProvider")
     public Example2(String addressLine) {
         this.addressLine = addressLine;
-    }
+    }*/
 
-    @BeforeSuite()
-    public void beforeSuite(){
-        System.out.println("before suite");
-    }
-
-    @AfterSuite()
-    public void afterSuite(){
-        System.out.println("after suite");
-    }
-
-    @BeforeClass()
-    public void init(){
-        System.out.println("before class");
-    }
-
-    @AfterClass()
-    public void tearDown(){
-        System.out.println("after class");
-    }
-
-    @BeforeMethod()
-    public void beforeEachMethod(){
-        System.out.println("before each method");
-    }
-
-    @AfterMethod()
-    public void afterEachMethod(){
-        System.out.println("after each method");
-    }
-
-    @Test()
-    public void testMethodProvider(){
+    @Test(dataProvider = "testDataProvider")
+    public void testMethodProvider(String addressLine){
         System.out.println("method runs = " + addressLine);
         if (addressLine.equalsIgnoreCase("state")) {
             Assert.assertTrue(false);
         }
     }
 
-    @DataProvider
-    public static String[][] testDataProvider(){
+    @DataProvider(name = "testDataProvider")
+    public static String[][] testDataProviderMethod(){
         return new String[][] {new String[]{"state"}, new String[]{"city"}};
     }
 

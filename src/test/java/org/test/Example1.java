@@ -22,7 +22,7 @@ import org.testng.annotations.*;
 
 public class Example1 {
 
-    @BeforeSuite()
+    /*@BeforeSuite()
     public void beforeSuite(){
         System.out.println("before suite");
     }
@@ -51,7 +51,7 @@ public class Example1 {
     public void afterEachMethod(){
         System.out.println("after each method");
     }
-
+*/
     @Test
     public void testMethod1(){
         System.out.println("method1");
@@ -72,7 +72,7 @@ public class Example1 {
     }
 
     @Test(dataProvider = "testqqqq")
-    public void testDataProvider(int i, int a){
+    public void testMethod3(int i, int a){
         System.out.println("Prime Number" + i + a );
 
     }
