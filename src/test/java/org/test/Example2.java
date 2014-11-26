@@ -38,8 +38,8 @@ public class Example2 {
     }
 
     @DataProvider(name = "testDataProvider")
-    public static String[][] testDataProviderMethod(){
-        return new String[][] {new String[]{"state"}, new String[]{"city"}};
+    public static Object[][] testDataProviderMethod(){
+        return new Object[][] {new Object[]{"state"}, new Object[]{"city"}};
     }
 
 }

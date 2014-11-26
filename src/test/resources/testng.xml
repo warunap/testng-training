@@ -5,6 +5,7 @@
         <classes>
             <class name="org.test.Example1" />
             <class name="org.test.Example2"/>
+            <class name="org.test.DataDrivenUsingFactories"/>
         </classes>
 
     </test>
