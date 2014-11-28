@@ -20,6 +20,7 @@ package org.test;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+@Listeners(ExecutionHandler.class)
 public class Example1 {
 
     /*@BeforeSuite()
@@ -31,7 +32,7 @@ public class Example1 {
     public void afterSuite(){
         System.out.println("after suite");
     }
-
+*/
     @BeforeClass()
     public void init(){
         System.out.println("before class");
@@ -42,7 +43,7 @@ public class Example1 {
         System.out.println("after class");
     }
 
-    @BeforeMethod()
+    /*@BeforeMethod()
     public void beforeEachMethod(){
         System.out.println("before each method");
     }
@@ -50,9 +51,8 @@ public class Example1 {
     @AfterMethod()
     public void afterEachMethod(){
         System.out.println("after each method");
-    }
-*/
-    @Test
+    }*/
+    @Test()
     public void testMethod1(){
         System.out.println("method1");
         Assert.assertTrue(true);
@@ -66,7 +66,7 @@ public class Example1 {
         }
     }
 
-    @Test(dependsOnMethods = "testMethod1")
+    /*@Test(dependsOnMethods = "testMethod1")
     public void dependsTest(){
         System.out.println("Depends ");
     }
@@ -85,6 +85,6 @@ public class Example1 {
     @DataProvider(name = "testqqqq")
     public static Object[][] testProv(){
         return new Object[][] {{1, 4}, {5, 6}};
-    }
+    }*/
 
 }

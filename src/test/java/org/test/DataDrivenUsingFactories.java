@@ -1,6 +1,5 @@
 package org.test;
 
-import org.testng.ITest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
@@ -8,7 +7,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
-public class DataDrivenUsingFactories implements ITest {
+public class DataDrivenUsingFactories extends MySuperClass {
     private String name;
     private int age;
 
@@ -35,7 +34,7 @@ public class DataDrivenUsingFactories implements ITest {
 
     public String getTestName() {
         StringBuilder builder = new StringBuilder();
-        builder.append("[name=").append(name).append(", age=").append(age).append("]");
+        builder.append("[param1=").append(name).append(", param2=").append(age).append("]");
         return builder.toString();
     }
 }
