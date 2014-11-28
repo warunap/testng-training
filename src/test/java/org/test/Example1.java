@@ -20,6 +20,8 @@ package org.test;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.io.*;
+
 @Listeners(ExecutionHandler.class)
 public class Example1 {
 
@@ -34,7 +36,7 @@ public class Example1 {
     }
 */
     @BeforeClass()
-    public void init(){
+    public void init() throws IOException {
         System.out.println("before class");
     }
 
