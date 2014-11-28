@@ -18,11 +18,10 @@
 package org.test;
 
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-import java.io.*;
-
-@Listeners(ExecutionHandler.class)
 public class Example1 {
 
     /*@BeforeSuite()
@@ -36,7 +35,7 @@ public class Example1 {
     }
 */
     @BeforeClass()
-    public void init() throws IOException {
+    public void init() {
         System.out.println("before class");
     }
 
