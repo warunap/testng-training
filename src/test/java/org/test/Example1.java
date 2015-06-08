@@ -65,6 +65,8 @@ public class Example1 {
             System.out.println("method2");
             break;
         }
+
+        Assert.assertTrue(false);
     }
 
     /*@Test(dependsOnMethods = "testMethod1")
