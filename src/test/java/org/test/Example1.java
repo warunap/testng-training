@@ -54,13 +54,13 @@ public class Example1 {
         System.out.println("after each method");
     }*/
     @Test()
-    public void testMethod1(){
+    public void testMethod2(){
         System.out.println("method1");
         Assert.assertTrue(true);
     }
 
     @Test()
-    public void testMethod2(){
+    public void testMethod1(){
         while(true){
             System.out.println("method2");
             break;
