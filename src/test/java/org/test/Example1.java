@@ -56,6 +56,11 @@ public class Example1 {
     @Test()
     public void testMethod2(){
         System.out.println("method1");
+        try {
+            Thread.sleep(600000);
+        } catch (InterruptedException e) {
+
+        }
         Assert.assertTrue(true);
     }
 
@@ -66,7 +71,7 @@ public class Example1 {
             break;
         }
 
-        Assert.assertTrue(false);
+        Assert.assertTrue(true);
     }
 
     /*@Test(dependsOnMethods = "testMethod1")

@@ -5,7 +5,7 @@
     <test name="example">
         <classes>
             <class name="org.test.Example1" />
-            <class name="org.test.Example11"/>
+            <!--<class name="org.test.Example11"/>-->
             <!--<class name="org.test.DataDrivenUsingFactories"/>
             <class name="org.test.Example3"/>-->
         </classes>
