@@ -57,7 +57,7 @@ public class Example1 {
     public void testMethod2(){
         System.out.println("method1");
         try {
-            Thread.sleep(600000);
+            Thread.sleep(1200000);
         } catch (InterruptedException e) {
 
         }
